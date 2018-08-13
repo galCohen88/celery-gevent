@@ -7,9 +7,15 @@ When using gevent monkey patch and running celery task, tasks are not re-execute
 
 
 virtualenv celeryge
+
 source celeryge/bin/activate
+
 pip install -e .
+
 docker network create celerygevent
+
 docker-compose up
+
 celery -A src worker --loglevel=DEBUG
+
 celery beat -A src.tasks --loglevel=DEBUG
