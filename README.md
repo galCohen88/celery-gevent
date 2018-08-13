@@ -5,7 +5,7 @@ Problem:
 When using gevent monkey patch and running celery task, tasks are not re-executed after visibility_timeout is expired
 
 
-
+# Start the project
 virtualenv celeryge
 
 source celeryge/bin/activate
