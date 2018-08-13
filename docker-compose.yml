@@ -1,0 +1,14 @@
+version: '2.1'
+services:
+  redis:
+    networks:
+      - celerygevent
+    container_name: redis
+    image: "redis:2.8"
+    ports:
+      - 6379:6379
+    restart: unless-stopped
+
+networks:
+  celerygevent:
+    external: true
