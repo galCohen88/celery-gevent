@@ -16,6 +16,6 @@ docker network create celerygevent
 
 docker-compose up
 
-celery -A src worker --loglevel=DEBUG
+celery -A src.tasks worker -P gevent --loglevel=DEBUG
 
 celery beat -A src.tasks --loglevel=DEBUG
